@@ -1,0 +1,9 @@
+.import
+*.zip
+*.pck
+*.x86_64
+*.import
+sprites/*.import
+*.html
+*.js
+*.wasm

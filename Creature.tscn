@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Creature.gd" type="Script" id=1]
+[ext_resource path="res://sprites/playerbody.png" type="Texture" id=2]
+[ext_resource path="res://sprites/eye.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 198.0
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 12, 80 )
+
+[node name="Creature" type="Area2D" index="0" groups=[
+"creature",
+]]
+
+rotation = -9.27469e-05
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Body" type="Sprite" parent="." index="0"]
+
+rotation = 0.000654332
+scale = Vector2( 0.08, 0.08 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Eye" type="Sprite" parent="Body" index="0"]
+
+texture = ExtResource( 3 )
+
+[node name="BodyCollision" type="CollisionShape2D" parent="." index="1"]
+
+rotation = 0.000654332
+scale = Vector2( 0.08, 0.08 )
+shape = SubResource( 1 )
+
+[node name="Sight" type="Area2D" parent="." index="2"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
+
+[node name="SightCollision" type="CollisionShape2D" parent="Sight" index="0"]
+
+position = Vector2( 0, -80 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+
