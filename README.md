@@ -1,5 +1,7 @@
 # EvoSim
 
+![app screenshot](https://github.com/JennissenEvan/EvoSim/blob/7cb44bf6eb05f7b52d4ca516cd3efdf7897ccefa/evosim_screenshot.png)
+
 A simple evolution simulator I made back in 2019. Creatures move across the world in search of food and reproduce.
 Initially, they blindly crawl around, but through random mutations and natural selection, they learn to become more efficient over time.
 
